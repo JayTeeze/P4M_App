@@ -2,13 +2,13 @@
     <mat-card>
         <mat-card-header>
             <mat-card-title>PICK-4-ME</mat-card-title>
-            <button mat-icon-button>
+            <button mat-icon-button (click)="onAddChoice()">
                 <mat-icon>add</mat-icon>
             </button>
         </mat-card-header>
         <ng-container>
             <mat-card-content>
-                {{ pick.name }}
+                {{ pick }}
             </mat-card-content>
         </ng-container>
         <mat-card-actions>

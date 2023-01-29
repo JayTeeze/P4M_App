@@ -10,12 +10,14 @@ import { RestAPIPickerService } from './services/restapipicker.service';
 import { RestAPIChoicesService } from './services/restapichoices.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
-import { AddchoicedialogComponent } from './choices/addchoicedialog/addchoicedialog.component';
+import { AddChoiceDialogComponent } from './choices/addchoicedialog/addchoicedialog.component';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddchoicedialogComponent
+    AddChoiceDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,9 @@ import { AddchoicedialogComponent } from './choices/addchoicedialog/addchoicedia
     MatCardModule,
     MatIconModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatInputModule,
+    FormsModule
   ],
   providers: [
     RestAPIPickerService,

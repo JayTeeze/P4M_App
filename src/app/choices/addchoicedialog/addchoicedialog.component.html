@@ -1,1 +1,13 @@
-<p>addchoicedialog works!</p>
+<h2 class="add-option-header">Add A New Food Option!</h2>
+
+<mat-dialog-content>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>New Option</mat-label>
+            <input matInput placeholder="Ex. Pizza Hut" [(ngModel)]="choice" name="choice">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-stroked-button (click)="onAdd()">Add</button>
+</mat-dialog-actions>
