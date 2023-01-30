@@ -18,26 +18,10 @@ mat-card-content {
     justify-content: center;
     font-size: 100px;
     align-content: center;
-    min-height: 400px;
+    min-height: 600px;
     text-align: center;
 }
 
 mat-card-actions {
     justify-content: center;
-}
-
-
-.main-container {
-    background-color:aquamarine;
-    height: auto;
-    padding: 10px;
-}
-
-.header {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-h1 {
-    display: inline-block;
 }

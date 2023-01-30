@@ -13,11 +13,14 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { AddChoiceDialogComponent } from './choices/addchoicedialog/addchoicedialog.component';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { ChoiceListDialogComponent } from './choices/choicelistdialog/choicelistdialog.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddChoiceDialogComponent
+    AddChoiceDialogComponent,
+    ChoiceListDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     MatDialogModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatTableModule
   ],
   providers: [
     RestAPIPickerService,

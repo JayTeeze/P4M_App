@@ -2,9 +2,14 @@
     <mat-card>
         <mat-card-header>
             <mat-card-title>PICK-4-ME</mat-card-title>
-            <button mat-icon-button (click)="onAddChoice()">
-                <mat-icon>add</mat-icon>
-            </button>
+            <span>
+                <button mat-icon-button (click)="onOpenChoiceList()">
+                    <mat-icon>view_list</mat-icon>
+                </button>
+                <button mat-icon-button (click)="onAddChoice()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </span>
         </mat-card-header>
         <ng-container>
             <mat-card-content>

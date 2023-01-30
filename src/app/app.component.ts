@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddChoiceDialogComponent } from './choices/addchoicedialog/addchoicedialog.component';
+import { ChoiceListDialogComponent } from './choices/choicelistdialog/choicelistdialog.component';
 import { Pick } from './classes/pick';
 import { RestAPIPickerService } from './services/restapipicker.service';
 
@@ -21,6 +22,13 @@ export class AppComponent {
     this._restAPIPickerService.getPick().subscribe(pick => {
       this.pick = pick.name;
       console.log(this.pick);
+    })
+  }
+
+  onOpenChoiceList() {
+    this.dialog.open(ChoiceListDialogComponent, {
+      width: '500px',
+      height: '400px'
     })
   }
 
