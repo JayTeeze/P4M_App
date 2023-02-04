@@ -9,10 +9,10 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let row">
-            <button mat-icon-button (click)="onUpdate()">
+            <button mat-icon-button (click)="onUpdate(row.id)">
                 <mat-icon>edit</mat-icon>
             </button>
-            <button mat-icon-button (click)="onDelete()">
+            <button mat-icon-button (click)="onDelete(row.id)">
                 <mat-icon color="warn">delete_outline</mat-icon>
             </button>
         </td>

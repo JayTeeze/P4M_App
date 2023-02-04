@@ -22,7 +22,6 @@ export class AddChoiceDialogComponent {
       newChoice.name = this.choice;
   
       this._restAPIChoiceService.createChoice(newChoice).subscribe(res => {
-        console.log(res);
         this.dialogRef.close();
       })
     }
