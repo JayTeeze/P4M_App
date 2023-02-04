@@ -32,6 +32,10 @@ export class AppComponent {
 
   onAddChoice() {
     this.dialog.open(AddChoiceDialogComponent, {
+      data: {
+        header: 'Add A New Food Option',
+        submitBtnTxt: 'Add'
+      },
       width: '500px'
     });
   }

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { RestAPIChoicesService } from 'src/app/services/restapichoices.service';
 import { Choice } from 'src/app/classes/choice';
 import { DataSource } from '@angular/cdk/collections';
 import { Observable, ReplaySubject } from 'rxjs';
+import { AddChoiceDialogComponent } from '../addchoicedialog/addchoicedialog.component';
 
 @Component({
   selector: 'app-choicelistdialog',
@@ -19,7 +20,8 @@ export class ChoiceListDialogComponent implements OnInit {
 
   constructor(
     private dialogRef: MatDialogRef<ChoiceListDialogComponent>,
-    private _restAPIChoiceService: RestAPIChoicesService
+    private _restAPIChoiceService: RestAPIChoicesService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +32,16 @@ export class ChoiceListDialogComponent implements OnInit {
     })
   }
 
-  onUpdate(id: number) {}
+  onUpdate(choice: Choice) {
+    this.dialog.open(AddChoiceDialogComponent, {
+      data: {
+        header: 'Update Food Option',
+        choice: choice,
+        submitBtnTxt: 'Update'
+      },
+      width: '500px'
+    });
+  }
 
   onDelete(id: number) {
     this._restAPIChoiceService.deleteChoice(id)
